@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shared_preferences"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.gulbalasalamov.sharedpreferencesdemo2.SharedPreferencesActivity">
+
+    <TextView
+        android:id="@+id/tv_ayarlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Oyun Ayarları"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/tv_parlaklik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_ayarlar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignStart="@id/tv_ayarlar"
+        android:layout_below="@id/tv_ayarlar"
+        android:layout_marginTop="15dp"
+        android:text="Parlaklık"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <SeekBar
+        android:id="@+id/seekbar_parlaklik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_parlaklik"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_parlaklik"
+        android:layout_marginTop="15dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/tv_ses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_ayarlar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignStart="@id/tv_ayarlar"
+        android:layout_below="@id/seekbar_parlaklik"
+        android:layout_marginTop="15dp"
+        android:text="Ses"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <SeekBar
+        android:id="@+id/seekbar_ses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_ses"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_ses"
+        android:layout_marginTop="15dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/tv_seviye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/seekbar_ses"
+        android:layout_marginTop="15dp"
+        android:text="Oyunun Seviyesi: "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_seviye"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_kolay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Kolay" />
+
+        <RadioButton
+            android:id="@+id/rb_orta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Orta" />
+
+        <RadioButton
+            android:id="@+id/rb_zor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Zor" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:onClick="ayarlariKaydet"
+        android:text="Kaydet"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
